@@ -1,0 +1,31 @@
+name: highlight_refinement
+model: hallucination_GAN
+distortion: sr
+scale: 1
+gpu_ids: [0]
+
+datasets:
+  test_1:  # the 1st test dataset
+    name: test_set
+    mode: LQGT_condition
+    dataroot_LQ: ../dataset/Youtube_hdr/test_sdr
+    dataroot_cond: ../dataset/Youtube_hdr/test_cond
+    dataroot_GT: ../dataset/Youtube_hdr/test_hdr
+    
+#### network structures
+network_G:
+  which_model_G: Ensemble_AGCM_LE
+  classifier: color_condition
+  cond_c: 6
+  in_nc: 3
+  out_nc: 3
+  nf: 32
+  act_type: 'relu'
+  weighting_network: false
+
+#### path
+path:
+  root: ./
+  pretrain_model_G: ../pretrained_models/HG.pth
+
+

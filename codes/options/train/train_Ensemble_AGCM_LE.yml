@@ -1,0 +1,74 @@
+#### general settings
+name: Ensemble_AGCM_LE
+model: condition
+use_tb_logger: true
+distortion: sr
+scale: 1
+gpu_ids: [0,1]
+
+#### datasets
+datasets:
+  train:
+    name: HDRTV1K
+    mode: LQGT_condition
+    dataroot_LQ: ../dataset/Youtube_hdr/train_sdr_sub
+    dataroot_cond: ../dataset/Youtube_hdr/train_sdr_bicx4LR_npy
+    dataroot_GT: ../dataset/Youtube_hdr/train_hdr_sub
+    cond_scale: 4
+    use_shuffle: true
+    n_workers: 8 # 8
+    batch_size: 8 # 8 | 16
+    GT_size: 480 # 160 | 480
+    use_flip: false
+    use_rot: false
+  val:
+    name: HDRTV1K
+    mode: LQGT_condition
+      dataroot_LQ: ../dataset/Youtube_hdr/test_sdr
+      dataroot_cond: ../dataset/Youtube_hdr/test_cond
+      dataroot_GT: ../dataset/Youtube_hdr/test_hdr
+    cond_scale: 4
+    save_img: false
+    testset: true
+
+#### network structures
+network_G:
+  which_model_G: Ensemble_AGCN_LE
+  classifier: color_condition
+  cond_c: 6
+  in_nc: 3
+  out_nc: 3
+  nf: 32
+  act_type: 'relu'
+  weighting_network: false
+
+#### path
+path:
+  root: ./
+  pretrain_model_G: ../pretrained_models/Ensemble_AGCM_LE.pth
+  strict_load: true
+
+#### training settings: learning rate scheme, loss
+train:
+  lr_G: !!float 5e-5   #1e-4
+  lr_scheme: CosineAnnealingLR_Restart # MultiStepLR | CosineAnnealingLR_Restart
+  beta1: 0.9
+  beta2: 0.99
+  niter: 600000
+  warmup_iter: -1  # no warm up
+
+  T_period: [400000, 200000]
+  restarts: [400000, 600000]
+  eta_min: !!float 1e-07
+  restart_weights: [1, 0.5]
+
+  pixel_criterion: l1
+  pixel_weight: 1.0
+
+  manual_seed: 10
+  val_freq: !!float 5e3
+
+#### logger
+logger:
+  print_freq: 200
+  save_checkpoint_freq: !!float 5e3
