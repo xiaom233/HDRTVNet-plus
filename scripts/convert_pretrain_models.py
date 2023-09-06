@@ -3,9 +3,9 @@ import torch
 from copy import deepcopy
 from models.modules.Ensemble_AGCM_LE_arch import Ensemble_AGCN_LE
 
-AGCM_path = '/data/zyli/projects/HDRTVNet_New/experiments/012_L1_AGCM_NewMultistage_5m8m_4e-4/models/615000_G.pth'
-LE_path = '/data/zyli/projects/HDRTVNet_New/experiments/040_HDRUNet3T1_nf32_woWN_withCond_GT240B8_COS_1e-4_archived_220910-150552/models/670000_G.pth'
-save_path = '/data/zyli/projects/HDRTVNet_New/pretrained_models/Ensemble_AGCM_LE.pth'
+AGCM_path = 'AGCM.pth'
+LE_path = 'LE.pth'
+save_path = 'Ensemble_AGCM_LE.pth'
 
 AGCM_dic = torch.load(AGCM_path)
 LE_dic = torch.load(LE_path)
