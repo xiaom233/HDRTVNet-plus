@@ -1,9 +1,9 @@
 # [HDRTVNet++](https://github.com/xiaom233/HDRTVNet-plus)
 
 ### Towards Efficient SDRTV-to-HDRTV by Learning from Image Formation
-Xiangyu Chen*, Zheyuan Li*, Zhengwen Zhang, 
+Xiangyu Chen*, Zheyuan Li*, Zhengwen Zhang,   
 [Jimmy S. Ren](https://scholar.google.com.hk/citations?hl=zh-CN&user=WKO_1VYAAAAJ), 
-Yihao Liu, Jingwen He, Lynhoo Tian,
+Yihao Liu, Jingwen He, Lynhoo Tian,  
 [Yu Qiao](https://scholar.google.com/citations?user=gFtI-8QAAAAJ&hl=zh-CN) 
 and [Chao Dong](https://scholar.google.com.hk/citations?user=OSDCB0UAAAAJ&hl=zh-CN)
 
@@ -17,11 +17,11 @@ and [Chao Dong](https://scholar.google.com.hk/citations?user=OSDCB0UAAAAJ&hl=zh-
 ## Overview
 Simplified SDRTV/HDRTV formation pipeline:
 
-<img src="https://raw.githubusercontent.com/xiaom233/HDRTVNet-plus/master/fig/Fig1(a)_content_foramtion_pipeline.png" width="600"/>
+<img src="https://github.com/xiaom233/HDRTVNet-plus/blob/main/fig/Fig1(a)_content_foramtion_pipeline.png" width="600"/>
 
 Overview of the method:
 
-<img src="https://raw.githubusercontent.com/xiaom233/HDRTVNet-plus/master/fig/Fig3_network_arch.png" width="900"/>
+<img src="https://github.com/xiaom233/HDRTVNet-plus/blob/main/fig/Fig3_network_arch.png" width="900"/>
 
 ## Getting Started
 
@@ -43,7 +43,8 @@ Please refer to the [requirements](https://raw.githubusercontent.com/chxy95/HDRT
 
 ### How to test
 
-We provide the pretrained models to test, which can be downloaded from [Baidu Netdisk](https://pan.baidu.com/s/1OSLVoBioyen-zjvLmhbe2g) (access code: 2me9) or [OneDrive](https://uofmacau-my.sharepoint.com/:f:/g/personal/yc17494_umac_mo/EteMb8FVYE5GqILE2mV-1W8B0-S_ynjt2gAgHkDH9LgkMg?e=EnBn3Q) (access code: HDRTVNet). Since our method is casaded of three steps, the results also need to be inferenced step by step. 
+We provide the pretrained models to test, which can be found in `./pretrained_models`.
+Since our method is casaded of three steps, the results also need to be inferenced step by step. 
 - Before testing, it is optional to generate the downsampled inputs of the condition network in advance. Make sure the `input_folder` and `save_LR_folder` in `./scripts/generate_mod_LR_bic.m` are correct, then run the file using Matlab. After that, matlab-bicubic-downsampled versions of the input SDR images are generated that will be input to the condition network. Note that this step is not necessary, but can reproduce more precise performance. Besides, if the pretrained HG model would be used, you should generate the masks of the input SDR images using `./scripts/generate_mask.py` and modify the corresponding paths in the config files.
 - For the first part of AGCM, make sure the paths of `dataroot_LQ`, `dataroot_cond`, `dataroot_GT` and `pretrain_model_G` in `./codes/options/test/test_AGCM.yml` are correct, then run
 ```
