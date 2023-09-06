@@ -9,7 +9,8 @@ and [Chao Dong](https://scholar.google.com.hk/citations?user=OSDCB0UAAAAJ&hl=zh-
 
 (* indicates equal contribution)
 
-**The conference version is accepted to ICCV 2021.**
+**:star:The conference version is accepted to ICCV 2021.**  
+**:rocket:The conference repository can be found [here](https://github.com/chxy95/HDRTVNet/tree/main)**
 
 [comment]: <> (**I will give a detailed interpretation about this work on Zhihu. The link will be released soon.**)
 
@@ -89,7 +90,7 @@ python train.py -opt options/train/train_LE.yml
 ```
 python train.py -opt options/train/train_Ensemble_AGCM_LE.yml
 ```
-- After that, choose a pretrained model and modify the path of pretrained model in `./options/train/train_HG_GAN.yml`,
+- After that, choose a pretrained model and modify the path of pretrained model in `./options/train/train_HR.yml`,
   then run
 ```
 python train.py -opt options/train/train_HR.yml
@@ -98,7 +99,8 @@ python train.py -opt options/train/train_HR.yml
 
 ### Metrics
 
-Five metrics are used to evaluate the quantitative performance of different methods, including PSNR, SSIM, SR_SIM, Delta E<sub>ITP</sub> [(ITU Rec.2124)](https://www.itu.int/dms_pubrec/itu-r/rec/bt/R-REC-BT.2124-0-201901-I!!PDF-E.pdf) and [HDR-VDP3](https://sourceforge.net/projects/hdrvdp/). Since the latter three metrics are not very common in recent papers, we provide some reference codes in `./metrics` for convenient usage.
+Five metrics are used to evaluate the quantitative performance of different methods, 
+including PSNR, SSIM, SR_SIM, Delta E<sub>ITP</sub> [(ITU Rec.2124)](https://www.itu.int/dms_pubrec/itu-r/rec/bt/R-REC-BT.2124-0-201901-I!!PDF-E.pdf) and [HDR-VDP3](https://sourceforge.net/projects/hdrvdp/). Since the latter three metrics are not very common in recent papers, we provide some reference codes in `./metrics` for convenient usage.
 
 ### Visualization
 
@@ -108,6 +110,7 @@ If the HDR displayer is not available, some media players with HDR render can pl
 
 ## Citation
 If our work is helpful to you, please cite our paper:
+The conference version:
 
     @InProceedings{chen2021hdrtvnet,
         author    = {Chen, Xiangyu and Zhang, Zhengwen and Ren, Jimmy S. and Tian, Lynhoo and Qiao, Yu and Dong, Chao},
