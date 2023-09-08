@@ -1,7 +1,7 @@
 # [HDRTVNet++](https://github.com/xiaom233/HDRTVNet-plus)
 
 ### Towards Efficient SDRTV-to-HDRTV by Learning from Image Formation
-Xiangyu Chen*, Zheyuan Li*, Zhengwen Zhang, [Jimmy S. Ren](https://scholar.google.com.hk/citations?hl=zh-CN&user=WKO_1VYAAAAJ), Yihao Liu, Jingwen He, Lynhoo Tian, [Yu Qiao](https://scholar.google.com/citations?user=gFtI-8QAAAAJ&hl=zh-CN) and [Chao Dong](https://scholar.google.com.hk/citations?user=OSDCB0UAAAAJ&hl=zh-CN)
+Xiangyu Chen*, Zheyuan Li*, Zhengwen Zhang, [Jimmy S. Ren](https://scholar.google.com.hk/citations?hl=zh-CN&user=WKO_1VYAAAAJ), Yihao Liu, Jingwen He, Lynhoo Tian, [Yu Qiao](https://scholar.google.com/citations?user=gFtI-8QAAAAJ&hl=zh-CN), [Chao Dong](https://scholar.google.com.hk/citations?user=OSDCB0UAAAAJ&hl=zh-CN)
 
 (* indicates equal contribution)
 
