@@ -1,4 +1,4 @@
-# [HDRTVNet++](https://github.com/xiaom233/HDRTVNet-plus)
+# HDRTVNet++ [[Paper Link]](https://arxiv.org/abs/2309.04084)
 
 ### Towards Efficient SDRTV-to-HDRTV by Learning from Image Formation
 [Xiangyu Chen*](https://chxy95.github.io/), Zheyuan Li*, Zhengwen Zhang, [Jimmy S. Ren](https://scholar.google.com.hk/citations?hl=zh-CN&user=WKO_1VYAAAAJ), [Yihao Liu](https://scholar.google.com.hk/citations?hl=zh-CN&user=WRIYcNwAAAAJ), Jingwen He, [Yu Qiao](https://scholar.google.com/citations?user=gFtI-8QAAAAJ&hl=zh-CN), [Jiantao Zhou](https://www.fst.um.edu.mo/personal/jtzhou/), [Chao Dong](https://scholar.google.com.hk/citations?user=OSDCB0UAAAAJ&hl=zh-CN)
@@ -107,6 +107,14 @@ If the HDR displayer is not available, some media players with HDR render can pl
 
 ## Citation
 If our work is helpful to you, please cite our paper:
+
+    @article{hdrtvnetplus,
+      title={Towards Efficient SDRTV-to-HDRTV by Learning from Image Formation},
+      author={Chen, Xiangyu and Li, Zheyuan and Zhang, Zhengwen and Ren, Jimmy S. and Liu, Yihao and He, Jingwen and Qiao, Yu and Zhou, Jiantao and Dong, Chao},
+      journal={arXiv preprint arXiv:2309.04084},
+      year={2023}
+    }
+    
 The conference version:
 
     @InProceedings{chen2021hdrtvnet,
