@@ -8,9 +8,9 @@ datasets:
   test_1:  # the 1st test dataset
     name: test_set
     mode: LQGT_condition
-    dataroot_LQ: ../dataset/test_set/test_sdr
-    dataroot_cond: ../dataset/test_set/cond
-    dataroot_GT: ../dataset/test_set/test_hdr
+    dataroot_LQ: ../dataset/test_sdr
+    dataroot_cond: ../dataset/cond
+    dataroot_GT: ../dataset/test_hdr
     cond_scale: 4
 
 #### network structures

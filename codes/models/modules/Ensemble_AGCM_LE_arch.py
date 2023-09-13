@@ -15,11 +15,11 @@ class Ensemble_AGCM_LE(nn.Module):
         self.LE = HDRUNet3T1(in_nc=in_nc, out_nc=out_nc, nf=nf, act_type=act_type, weighting_network=weighting_network)
 
     def forward(self, x):
-        condition_output = self.AGCM(x)
+        condition_output, input = self.AGCM(x)
         LE_input = [condition_output, condition_output]
         # condition = image
         LE_output = self.LE(LE_input)
-        return LE_output, condition_output
+        return LE_output[0], condition_output
 
 if __name__=='__main__':
     net = Ensemble_AGCM_LE()

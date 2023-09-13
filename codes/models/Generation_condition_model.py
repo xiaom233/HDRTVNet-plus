@@ -82,7 +82,6 @@ class GenerationModel(BaseModel):
     def feed_data(self, data, need_GT=True):
         self.var_L = data['LQ'].to(self.device)  # LQ
         self.var_cond = data['cond'].to(self.device)  # condition
-
         if need_GT:
             self.real_H = data['GT'].to(self.device)  # GT
 

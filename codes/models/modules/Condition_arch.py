@@ -139,16 +139,6 @@ class ConditionNet(nn.Module):
         self.classifier = classifier
         if self.classifier == 'color_condition':
             self.classifier = Color_Condition(out_c=cond_c)
-        elif self.classifier == 'color_condition_3layer':
-            self.classifier = Color_Condition_3layer(out_c=cond_c)
-        elif self.classifier == 'color_condition_4layer':
-            self.classifier = Color_Condition_4layer(out_c=cond_c)
-        elif self.classifier == 'color_condition_6layer':
-            self.classifier = Color_Condition_6layer(out_c=cond_c)
-        elif self.classifier == 'Color_Condition_woDropout':
-            self.classifier = Color_Condition_woDropout(out_c=cond_c)
-        elif self.classifier == 'Color_Condition_woIN':
-            self.classifier = Color_Condition_woIN(out_c=cond_c)
 
         self.GFM_nf = 64
 
@@ -190,7 +180,7 @@ class ConditionNet(nn.Module):
         out = self.conv_last(out)
         out = out * scale_last.view(-1, 3, 1, 1) + shift_last.view(-1, 3, 1, 1) + out
 
-        return out
+        return out, x
 
 
 # 3 layers base model
@@ -314,6 +304,7 @@ class ConditionNet2Layer(nn.Module):
     def forward(self, x):
         content = x[0]
         condition = x[1]
+        print(self.classifier)
         fea = self.classifier(condition).squeeze(2).squeeze(2)
 
         scale_first = self.cond_scale_first(fea)
