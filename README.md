@@ -108,9 +108,9 @@ If the HDR displayer is not available, some media players with HDR render can pl
 ## Citation
 If our work is helpful to you, please cite our paper:
 
-    @article{hdrtvnetplus,
+    @article{chen2023towards,
       title={Towards Efficient SDRTV-to-HDRTV by Learning from Image Formation},
-      author={Chen, Xiangyu and Li, Zheyuan and Zhang, Zhengwen and Ren, Jimmy S. and Liu, Yihao and He, Jingwen and Qiao, Yu and Zhou, Jiantao and Dong, Chao},
+      author={Chen, Xiangyu and Li, Zheyuan and Zhang, Zhengwen and Ren, Jimmy S and Liu, Yihao and He, Jingwen and Qiao, Yu and Zhou, Jiantao and Dong, Chao},
       journal={arXiv preprint arXiv:2309.04084},
       year={2023}
     }
