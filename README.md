@@ -6,7 +6,7 @@
 (* indicates equal contribution)
 
 **:star:The conference version is accepted to ICCV 2021.**  
-**:rocket:The conference repository can be found [here](https://github.com/chxy95/HDRTVNet/tree/main)**
+**:rocket:The conference repository can be found [here](https://github.com/chxy95/HDRTVNet/tree/main).**
 
 [comment]: <> (**I will give a detailed interpretation about this work on Zhihu. The link will be released soon.**)
 
