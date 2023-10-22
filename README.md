@@ -1,7 +1,9 @@
 # HDRTVNet++ [[Paper Link]](https://arxiv.org/abs/2309.04084)
 
 ### Towards Efficient SDRTV-to-HDRTV by Learning from Image Formation
-[Xiangyu Chen*](https://chxy95.github.io/), Zheyuan Li*, Zhengwen Zhang, [Jimmy S. Ren](https://scholar.google.com.hk/citations?hl=zh-CN&user=WKO_1VYAAAAJ), [Yihao Liu](https://scholar.google.com.hk/citations?hl=zh-CN&user=WRIYcNwAAAAJ), Jingwen He, [Yu Qiao](https://scholar.google.com/citations?user=gFtI-8QAAAAJ&hl=zh-CN), [Jiantao Zhou](https://www.fst.um.edu.mo/personal/jtzhou/), [Chao Dong](https://scholar.google.com.hk/citations?user=OSDCB0UAAAAJ&hl=zh-CN)
+[Xiangyu Chen*](https://chxy95.github.io/), Zheyuan Li*, Zhengwen Zhang, [Jimmy S. Ren](https://scholar.google.com.hk/citations?hl=zh-CN&user=WKO_1VYAAAAJ), [Yihao Liu](https://scholar.google.com.hk/citations?hl=zh-CN&user=WRIYcNwAAAAJ), Jingwen He, 
+
+[Yu Qiao](https://scholar.google.com/citations?user=gFtI-8QAAAAJ&hl=zh-CN), [Jiantao Zhou](https://www.fst.um.edu.mo/personal/jtzhou/), [Chao Dong](https://scholar.google.com.hk/citations?user=OSDCB0UAAAAJ&hl=zh-CN)
 
 (* indicates equal contribution)
 
