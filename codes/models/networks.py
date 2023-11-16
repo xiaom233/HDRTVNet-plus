@@ -3,6 +3,7 @@ import models.modules.HDRUNet3T1_arch as HDRUNet3T1_arch
 import models.modules.Condition_arch as Condition_arch
 import models.modules.Hallucination_arch as Hallucination_arch
 import models.modules.Ensemble_AGCM_LE_arch as Ensemble_AGCM_LE_arch
+import models.modules.Discriminator_UNet_arch as Discriminator_UNet_arch
 
 import logging
 
