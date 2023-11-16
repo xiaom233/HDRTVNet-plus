@@ -87,7 +87,7 @@ class GenerationModel(BaseModel):
 
     def optimize_parameters(self, step):
         self.optimizer_G.zero_grad()
-        self.fake_H = self.netG((self.var_L, self.var_cond))
+        self.fake_H, input = self.netG((self.var_L, self.var_cond))
 
         l_pix = self.l_pix_w * self.cri_pix(self.fake_H, self.real_H)
         l_pix.backward()
