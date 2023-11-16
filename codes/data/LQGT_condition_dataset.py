@@ -46,7 +46,7 @@ class LQGT_dataset(data.Dataset):
         cond_scale = self.opt['cond_scale']
         if self.cond_folder is not None:
             if '_' in osp.basename(LQ_path):
-                cond_name = osp.basename(LQ_path).split('.png')[0]+'_bicx'+str(cond_scale)+'.npy'
+                cond_name = osp.basename(LQ_path).split('.png')[0]+'_bicx'+str(cond_scale)+'.png'
             else: cond_name = osp.basename(LQ_path).split('.')[0]+'_bicx'+str(cond_scale)+'.png'
             cond_path = osp.join(self.cond_folder, cond_name)
             cond_img = util.read_img(None, cond_path)
