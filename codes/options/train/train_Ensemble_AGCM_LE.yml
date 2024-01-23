@@ -33,7 +33,7 @@ datasets:
 
 #### network structures
 network_G:
-  which_model_G: Ensemble_AGCN_LE
+  which_model_G: Ensemble_AGCM_LE
   classifier: color_condition
   cond_c: 6
   in_nc: 3
